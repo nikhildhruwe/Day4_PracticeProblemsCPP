@@ -2,7 +2,7 @@
 using namespace std;
 
 void display(int *, int);
-void bubbleSort(int *a, int size){
+void insertionSort(int *a, int size){
     int temp;
      for (int i = 1; i < size; i++){
         for (int j = 0; j < size - i; j++){
@@ -15,15 +15,16 @@ void bubbleSort(int *a, int size){
     }
     display(a, size);
 }
+
 void display(int *a, int size){
     cout << "Sorted order of numbers are : " << endl;
     for (int i = 0; i < size; i++){
         cout << a[i] << " ";
     }
 }
-
 int main (){
-    int  a[] = {32, 54, 13, 21, 78, 44};
+    int  a[] = {32, 54, 13, 21, 78, 44}, temp;
     int size = sizeof(a)/sizeof(a[0]);
-    bubbleSort(a, size);
+
+    insertionSort(a, size);
 }
