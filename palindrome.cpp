@@ -9,8 +9,12 @@ int main () {
     cout << "Enter second word :" << endl;
     cin >> secondNumber;
     cout << endl;
-
+    if (firstNumber < 0 || secondNumber < 0){
+        cout << "Invalid input" << endl;
+        return 1;
+    }
     check = isPalindrome(firstNumber, secondNumber);
+
     if (check)
         cout << "Given Numbers are palindrome" << endl;
     else
