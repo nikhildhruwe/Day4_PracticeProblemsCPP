@@ -20,7 +20,7 @@ int partition(int *a, int start, int end){
         while(a[end] > pivot){
             end--;
         }
-        
+
         if (start < end){
             swap(a[start], a[end]);
         }
@@ -33,12 +33,12 @@ void quickSort(int *a, int start, int end){
     if (start < end ){
        int  partitionIndex = partition(a, start, end);
             quickSort(a,start, partitionIndex - 1 );
-            quickSort(a, partitionIndex + 1, end);  
+            quickSort(a, partitionIndex + 1, end);
     }
 }
 int main (){
     int  a[] = {32, 54, 13, 21, 78, 44, 1, 21}, temp;
-    int size = sizeof(a)/sizeof(a[0]);
+    int size = sizeof(a) / sizeof(a[0]);
 
     quickSort(a, 0, size - 1);
     display(a, size);

@@ -17,7 +17,7 @@ void linearSearch(int *a, int size, int number){
 
 int main (){
     int  a[] = {32, 54, 13, 21, 78, 44}, number;
-    int size = sizeof(a)/sizeof(a[0]);
+    int size = sizeof(a) / sizeof(a[0]);
 
     cout << "Enter element to search: ";
     cin >> number;

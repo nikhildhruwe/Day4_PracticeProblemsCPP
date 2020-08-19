@@ -18,7 +18,7 @@ int binarySearch (int *a, int size, int data){
 
 int main(){
     int  a[] = {32, 54, 13, 21, 78, 44}, data, index;
-    int size = sizeof(a)/sizeof(a[0]);
+    int size = sizeof(a) / sizeof(a[0]);
 
     cout << "Enter element to search: ";
     cin >> data;
