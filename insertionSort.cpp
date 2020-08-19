@@ -5,13 +5,13 @@ void display(int *, int);
 void insertionSort(int *a, int size){
     int temp;
      for (int i = 1; i < size; i++){
-        for (int j = 0; j < size - i; j++){
-            if (a[j] > a[j+1]){
-                temp = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = temp;
-            }
+        temp = a[i];
+        int j = i -1;
+        while ( j>=0 && a[j] > temp){
+            a[j+1] = a[j];
+            j--;
         }
+        a[j+1] = temp;
     }
     display(a, size);
 }
